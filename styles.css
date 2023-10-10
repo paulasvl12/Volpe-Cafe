@@ -1,0 +1,187 @@
+*, *:before, *:after{
+    box-sizing: inherit;
+  }
+  img{
+    max-height: 300px;
+    max-width: 100%;
+    height: auto;
+  }
+  .container-fluid {
+    padding: 0px;
+  }
+  .cell {
+    width:25%;
+    padding: 5px;
+  }
+  .masthead {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('https://images.pexels.com/photos/3968061/pexels-photo-3968061.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+   input, div#searchbar, a{
+  
+       margin: auto;
+       width: 50%;
+       font-size: 1rem;
+  
+   }
+   label, input{
+     display: flex;
+     flex-direction: row;
+    padding: 2%;
+    margin: 10px;
+   }
+  
+  h1, h2, h3, h4, p.coffeesweetsNames{
+    color: #DB5A42;
+    font-family: 'Pacifico', cursive;
+  }
+  h2.titles, h2.titles1, h1#recipe-heading {
+    font-family: 'Archivo Black', sans-serif;
+  }
+  
+   .mb-4 {
+       margin: auto;
+       padding: 5%;
+   }
+  
+   h1#recipe-heading, h4, p#reviewParagraph {
+     padding: 2% 0;
+     text-align: center;
+   }
+  
+   section#recipes{
+     display: flex;
+     flex-flow: row wrap;
+     padding: 0 5%;
+     font-family:  'Raleway','Cormorant Garamond', serif;
+   }
+  
+   .info-p{
+    text-align: center;
+  }
+  
+  
+  a {
+  color: white;
+  }
+  
+  
+  
+  #homepageParagraphs {
+    width: 35%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+   footer {
+      margin-top: 3%;
+       bottom: 0;
+       width: 100%;
+       padding: 2%;
+      background-color: #A57F60;
+   }
+  
+   footer > ul {
+      color: white;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+   }
+  
+  footer ul li {
+      margin: 0 15%;
+  }
+  
+   footer ul  li i {
+     min-width: 40px;
+     min-height: 40px;
+   }
+  
+  footer p {
+      color: white;
+      margin: auto;
+      text-align: center;
+  }
+  
+  /* Reviews page -> Mobile responsiveness CSS
+    For PCs : have multiple revies in one row
+    For phones : have only one review per row */
+    @media only screen and (max-width: 600px) {
+  
+      .reviews{
+        width: 25vh;
+      }
+      h2.titles {
+        width: 50vh;
+        position: relative;
+        left: 15%;
+        padding: 5% 0;
+      }
+    }
+  
+    @media only screen and (min-width: 1000px) {
+      h2.titles {
+        width: 50vh;
+        position: relative;
+        left: 45%;
+        padding: 3% 0;
+      }
+      h2.titles1 {
+        width: 50vh;
+        position: relative;
+        left: 40%;
+        padding: 3% 0;
+      }
+      .reviews{
+        width: 30%;
+        padding: 10px 5%;
+      }
+      .recipe {
+        display: flex;
+        flex-direction: row;
+        width: 30%;
+      }
+      section#reviewsRecipes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .reviews > label, textarea, button {
+        display: flex;
+        flex-direction: column;
+  
+      }
+    }
+    .rating {
+    display: flex;
+    flex-direction: row-reverse;
+    }
+  
+    .rating>label {
+      font-size: 25px;
+      color: #ff0000;
+      cursor: pointer;
+    }
+    .rating>label::before {
+    content: "\2605";
+    position: absolute;
+    opacity: 0
+    }
+    .rating>input {
+    display: none
+    }
+    .rating>label:hover:before,
+    .rating>label:hover~label:before {
+    opacity: 1 !important
+    }
+    .rating>input:checked~label:before {
+    opacity: 1
+    }
+    .rating:hover>input:checked~label:before {
+    opacity: 0.4
+    }
